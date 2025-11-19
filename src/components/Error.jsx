@@ -1,15 +1,15 @@
 import { useHistory } from 'react-router-dom';
 
 
-export default function Success() {
+
+export default function Error() {
 
     const history = useHistory()
     function clickHandler() {
         history.push('/')
     }
     return (
-        <div><p>Giriş Başarılı!</p>
+        <div><p>Kullanıcı adı veya şifre hatalı.</p>
             <button onClick={clickHandler}>Geri Dön</button></div>
     )
-
 }
