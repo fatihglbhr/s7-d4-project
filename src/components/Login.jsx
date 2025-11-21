@@ -86,7 +86,7 @@ export default function Login() {
           invalid={errors.email}
         />
         {errors.email ? (
-          <FormFeedback>{errorMessages.email}</FormFeedback>
+          <FormFeedback data-cy='error-em'>{errorMessages.email}</FormFeedback>
         ) : null}
       </FormGroup>
       <FormGroup>
@@ -101,7 +101,7 @@ export default function Login() {
           invalid={errors.password}
         />
         {errors.password ? (
-          <FormFeedback>{errorMessages.password}</FormFeedback>
+          <FormFeedback data-cy='error-pw'>{errorMessages.password}</FormFeedback>
         ) : null}
       </FormGroup>
       <FormGroup check>
@@ -117,7 +117,7 @@ export default function Login() {
         </Label>
       </FormGroup>
       <FormGroup className="text-center p-4">
-        <Button disabled={isValid ? false : true} color="primary">
+        <Button disabled={isValid ? false : true} color="primary" data-cy='loginbtn'>
           Sign In
         </Button>
       </FormGroup>
